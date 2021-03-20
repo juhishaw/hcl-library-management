@@ -1,0 +1,74 @@
+@import "../../../styles.scss";
+
+.book-list {
+    .book-category {
+        border-radius: 2px;
+        padding: .25em .5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: .3px;
+        width: fit-content;
+
+        &.AVAILABLE {
+            background-color: #c8e6c9;
+            color: #256029;
+        }
+
+        &.OVERDUE {
+            background-color: #ffcdd2;
+            color: #c63737;
+        }
+
+        &.BORROWED {
+            background-color: #ffd8b2;
+            color: #805b36;
+        }
+    }
+
+    .date-added {
+        margin-top: 5px;
+    }
+
+    .header-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px 0;
+
+        .title {
+            @include font-mixin(20px, #17A2B8, bold, 24px);
+            @include letter-spacing(0);
+        }
+
+        .text {
+            @include font-mixin(13px, #000000, 400, 15px);
+            @include letter-spacing(0);
+            cursor: pointer;
+        }
+    }
+
+    .p-input-icon-left {
+        width: 30%;
+        input {
+            width: 100%;
+        }
+    }
+
+    .profile-wrapper {
+        display: flex;
+        align-items: center;
+
+        .profile-img {
+            height: 30px;
+            width: 30px;
+            min-height: 30px;
+            min-width: 30px;
+            background-size: 100% 100% !important;
+            border-radius: 50% !important;
+            background-repeat: no-repeat !important;
+            margin-right: 10px;
+        }
+
+    }
+}
